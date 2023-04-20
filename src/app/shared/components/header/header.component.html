@@ -1,0 +1,28 @@
+<header class="header">
+    <div class="header__container"> <!-- If the Menu and Burger-Menu is open. they'll be closed -->
+        <label class="logo" routerLink="/home" (click)="closeMenu()" (click)="closeBurgerMenu()" (click)="closeBackground()">
+            D-Tech
+        </label> <!-- [ngClass]="{ 'nav--active': menuActive }". The shooter. To run the function -->
+        <!-- Page-Background -->
+        <div class="background__menu" [ngClass]="{ 'background__menu--active': backgroundActive }" 
+        (click)="closeMenu()" (click)="closeBurgerMenu()" (click)="closeBackground()"></div>
+        <!-- MENU -->
+        <nav class="nav" [ngClass]="{ 'nav--active': menuActive }">
+            <ul (click)="closeMenu()" (click)="closeBurgerMenu()" (click)="closeBackground()">
+                <li><a routerLink="/home" 
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">home</a>
+                </li>
+                <li><a >Service</a></li>
+            </ul>
+        </nav>
+        <!-- [ngClass]="{ 'btn__burger--active': burgerActive }". The shooter. To run the function -->
+        <div class="btn__burger" [ngClass]="{ 'btn__burger--active': burgerActive }">
+            <div class="hamburger" (click)="openMenu()" (click)="openBurgerMenu()" (click)="openBackground()">
+                <span class="line__1"></span> <!-- To Open the menu -->
+                <span class="line__2"></span>
+                <span class="line__3"></span>
+            </div>
+        </div>
+    </div>
+</header>

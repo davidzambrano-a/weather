@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    background: #ECE9E6;  /* Background Color */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+    // Remove margin of this FONT
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
